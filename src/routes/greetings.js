@@ -1,5 +1,5 @@
 import React from 'react';
-import MyGreetings from '../components/Greeting';
+import MyGreetings from '../components/greetings';
 
 export default function Greetings() {
   return (

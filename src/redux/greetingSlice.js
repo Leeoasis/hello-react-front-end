@@ -11,10 +11,13 @@ const greetingSlice = createSlice({
   initialState: { randomGreeting: '' },
   reducers: {},
   extraReducers: (builder) => {
-    builder
-      .addCase(fetchRandomGreeting.fulfilled, (state, action) => {
-        state.randomGreeting = action.payload;
-      });
+    builder.addCase(
+      fetchRandomGreeting.fulfilled,
+      (state, action) => ({
+        ...state,
+        randomGreeting: action.payload,
+      }),
+    );
   },
 });
 
